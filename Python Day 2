@@ -34,3 +34,15 @@ A="Michael Jackson"
 B=A.upper()
 B=A.replace("Michael", "Janet")
 A.find("el") find the first index of the sequence
+
+#cast a dictionary to a dataframe
+>>> songs= {'Album':['Thriller', 'Back in Black', 'The Dark Side of the Moon','The Bodyguard','Bat Out of Hell'],'Released':[1982,1980,1973, 1992, 1977],'Length':['00:42:19','00:42:11','00:42:49','00:57:44','00:46:33']}
+>>> songs_frame=pd.DataFrame(songs)
+>>> songs_frame['Album']
+
+>>> songs_frame.iloc[0,1] #positional indexing, first row, second column
+1982
+>>> songs_frame.iloc[2,2] #third row, third column
+'00:42:49'
+>>> songs_frame.loc[0,'Album']  #label based indexing
+'Thriller'
