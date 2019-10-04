@@ -21,3 +21,6 @@ plt.grid(True)
 string could be thought of as ordered sequence, each element corresponding to an index. Element include spaces, digits, and special characters.
 a/b gives floats
 a//b gives integers, with the rest truncated from the real result
+
+name[::2] select every two elements
+name[0:5:2] select every two elements from index 0 to index 4, 2 is stride value
