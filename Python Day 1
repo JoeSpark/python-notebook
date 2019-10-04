@@ -1,0 +1,174 @@
+版权归作者所有，任何形式转载请联系作者。
+作者：serendipity（来自豆瓣）
+来源：https://www.douban.com/note/735460321/
+
+使用的app有：DataCamp, Py，程序媛
+
+1. If a and b are storing values, b=a, if a changes b does not.
+
+If a and b are lists, b=a, then if a changes b changes too. And if b changes a changes too
+
+If a and b are lists, and if we get b from slicing from a, for example b=a[:], then b is a new list. If a changes, b does not change. And if b changes a doesn’t either.
+2. There are in total four types of data in python. Integer: 3, 10, etc. Floats: 3.86, 7.77, if you use divide, 9/3, you always get floats. Strings: we get strings by using “”. Boolean values: True, False, important thing is the capitalization is a must.
+
+You can transform each type to another using functions like str() int() float()
+
+3. Brackets is essentially a function that prioritize operations inside of it. I think this is a very enlightening explanation.
+
+4. Output=function_name(input)
+
+max(2,6,9) min(2,8,29,26)
+
+Also could operate on lists
+
+max[2,47,9,7] min[3,9,7,5]
+
+The input is called arguments, or args
+
+round(3.14,1) is rounding 3.14 to 1 decimal place
+
+round(3.14) is equal to int(3.14)
+
+So in round() the second argument is optional.
+
+4. Optional arguments: keyword arguments
+
+sorted()is a function that sort input from the lowest to highest
+
+sorted([3,5,9,10],reverse=False) reverse =False is default so you could save it
+
+sorted([3,6,8,9,10],reverse=True) will sort the first input from highest to lowest
+
+5. To test whether a list contains a value, use keyword in
+
+l=["a",0,"c"]
+
+print(0 in l)
+
+6. Boolean values: True, False
+
+Boolean expressions: expressions that give Boolean values as output. ex. ==, !=, and, or
+
+If statement have to be Boolean expressions.
+
+If temp>30:
+   print("hot")
+elif temp>10:
+   print("warm")
+else:
+   print("cold")
+
+7. l=[0,4,3]
+l.append(2)
+l.pop(1)
+print(l[2])
+
+append在末尾增添括号内的object
+pop删除index为括号内的数字的element，如果括号内为空则删除最后一个
+
+8. dictionaries are similar to lists but instead of using numeric indexes to access values, keys are used instead. In the example, Barack is the key.
+
+pres={"Barack":"Obama"}
+print(pres)
+
+Keys in a dictionary can be of any data type; Values in a dictionary can also be of any data type.
+
+pres={"Barack":2009}
+
+We can also fit multiple key-value pairs in a single dictionary. Separate these key-value pairs with commas.
+
+pres={
+        "Barack":"Obama",
+        "Start":2009,
+        "End":2017
+}
+print(pres)
+
+To acces a value in a dictionary, we simple use its key. 
+
+print (pres["Barack"])
+
+Also overwrite an existing value in a dictionary
+
+pres["Barack"]="Clinton"
+print (pres)
+
+Dictionaries use keys while lists use indexes.
+
+9. To show all the keys that a dictionary has
+
+keys=pres.keys()
+print(keys)
+
+To overwrite multiple values at once
+
+pres.update({"Barack":0,"Start":2013,"End":2019)
+print(pres)
+
+To remove a value, use .pop() specifying the key
+
+pres.pop("Start")
+print(pres)
+
+10.   
+
+num=0
+
+While True:
+if num ==5
+   break
+   else
+    num +=1
+print (num)
+
+11.While True: creates an infinite loop
+
+a=0
+While a>=0:
+a +=1
+This is also infinite.
+sum()
+
+12. range()
+
+range(2,5) is 2,3,4
+
+range(5) 5 is the stop integer, it starts from 0, ends at 4
+
+13. Make a dictionary from a list and its index values
+
+monkeys = [“a”,”b”,”c”,”d”]
+monkey_dit={}
+For i in range(len(monkeys)):
+monkey_dict[i] = monkeys[i]
+print(monkey_dict)
+
+ {0:‘a’,1:’b’,2:’c’,3:’d’}
+
+x=x+3
+is x+=3
+
+15. define functions
+
+def sports():
+ print(‘football’)
+sports()
+
+the function will perform all the code we write inside it that is indented
+
+Questions: how to indent it in python
+
+16. It’s sometimes useful to write a function that doesn’t do anything, usually to change it later. Pass lets us write a valid function that does nothing.
+
+def do_nothing():
+  pass
+
+Previous to the functions we define, make a variable outside a function, giving it a different value inside the function’s indentation doesn’t change it once you are outside the function
+
+hot =True
+def is_cold():
+ Hot=False
+is_cold()
+print(hot)
+
+You get True
