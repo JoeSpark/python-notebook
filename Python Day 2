@@ -1,0 +1,23 @@
+import matplotlib.pyplot as plt
+plt.show()
+plt.clf() will erase the old plot so you can start afresh
+plt.plot(x,y)   line, fit for time series, because time always increases so the line never goes backward. This is so because x is arrange in increasing order. If you put it in disorder, the line will go backward too.
+plt.scatter(x,y)    scatter, fit for non time series, because x is not time so the line could possibly go backward
+plt.hist(x, bins=n)    histogram, with n bins, each bin is equally divided, and for each bin accounts for the frequency. Default for n is 10
+annotate: Add explanatory notes to or supply with critical comments."The scholar annotated the earlier version of this novel".
+
+plt.xlabel("string")
+plt.ylabel()
+plt.title()
+plt.xticks=([0,2,4,6,10],["0B","2B","4B","6B","10B"])    changes the ticks and the annotations
+plt.xscale=('log')
+
+plt.scatter(x, y, s=pop,c=col, alpha=0.8)   s is size, c is color, alpha is opacity\
+
+plt.text(1550, 71, 'India')
+plt.text(5700, 80, 'China')
+plt.grid(True)
+
+string could be thought of as ordered sequence, each element corresponding to an index. Element include spaces, digits, and special characters.
+a/b gives floats
+a//b gives integers, with the rest truncated from the real result
