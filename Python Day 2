@@ -24,3 +24,13 @@ a//b gives integers, with the rest truncated from the real result
 
 name[::2] select every two elements
 name[0:5:2] select every two elements from index 0 to index 4, 2 is stride value
+name="Michael \n Jackson" 换行
+name="Michael \t Jackson" 一个很大的空格,tab
+name="Michael \\ Jackson" just a \ in-between
+print(r"Michael \ Jackson" a \ in-between
+3 * "Michael Jackson"
+
+A="Michael Jackson"
+B=A.upper()
+B=A.replace("Michael", "Janet")
+A.find("el") find the first index of the sequence
