@@ -1,0 +1,34 @@
+First we select all entries that is under the indicator: 'External debt stocks, variable rate (DOD, current US$)' and store in IDS2
+>>> IDS2=IDS[IDS['IndicatorName']=='External debt stocks, variable rate (DOD, current US$)']
+
+Then we found, the last columns seem to be filled with NaN, so we test and find it is like this
+>>> IDS2.iloc[:,-9:-1]
+       2019  2020  2021  2022  2023  2024  2025  2026
+68      NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+565     NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+1062    NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+1559    NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+2056    NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+...     ...   ...   ...   ...   ...   ...   ...   ...
+64678   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+65175   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+65672   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+66169   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+66666   NaN   NaN   NaN   NaN   NaN   NaN   NaN   NaN
+
+[135 rows x 8 columns]
+
+in 2018, it's not like this. We want to check if each element is NaN
+
+>>> np.isnan(np.array(IDS2.iloc[:,-9:-1]))
+array([[ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       ...,
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True],
+       [ True,  True,  True, ...,  True,  True,  True]])
+>>> sum(np.isnan(np.array(IDS2.iloc[:,-9:-1])))
+array([135, 135, 135, 135, 135, 135, 135, 135])
+
+Indeed each element is NaN, so we could drop all these columns out.
